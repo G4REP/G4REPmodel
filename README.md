@@ -3,10 +3,6 @@
 
 This repository contains the source code and scripts used in the development of **G4REP**, a deep learning framework for identifying RNA G-quadruplex-binding proteins (RG4BPs) using protein language model embeddings and LSTM-based neural networks.
 
-## Overview
-
-G4REP leverages Evolutionary Scale Modeling (ESM-2) embeddings and recurrent neural networks (LSTM) to classify proteins based on their ability to bind RNA G-quadruplex structures. This approach has demonstrated state-of-the-art performance, achieving an accuracy of 86% on benchmark datasets.
-
 ## Features
 
 - **LSTM architecture with ESM-2 embeddings**
