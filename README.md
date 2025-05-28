@@ -11,9 +11,10 @@ This repository contains the source code and scripts used in the development of 
 - **Support for full human proteome analysis**
 - **Web interface available via G4REP Server**
 
-## Files
+## Content
 
-- `Model1_ESM2_modular.py`: Modular script to load models, prepare data, and extract embeddings.
+- `G4REPmodel.py`: the python code script that can be run to reproduce our model (preparing the data, extracting the embeddings, training and testing).
+- `Prediction.py`: the python code script that can be run to predict new RG4BPs.
 - `README.md`: Project documentation.
 
 ## Installation
