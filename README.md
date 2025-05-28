@@ -1,7 +1,7 @@
 
 # G4REP: Deep Learning-Based Prediction of RNA G-Quadruplex-Binding Proteins
 
-This repository contains the source code and scripts used in the development of **G4REP**, a deep learning framework for identifying RNA G-quadruplex-binding proteins (RG4BPs) using protein language model embeddings and LSTM-based neural networks.
+This repository contains the source code and scripts used in the development of **G4REP**, a deep learning framework for identifying RNA G-quadruplex-binding proteins (**RG4BPs**) using protein language model embeddings and LSTM-based neural networks.
 
 ## Features
 
