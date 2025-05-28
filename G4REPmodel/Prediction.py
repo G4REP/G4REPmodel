@@ -56,7 +56,7 @@ def extract_embeddings(model_name, fasta_file, output_dir, tokens_per_batch=4096
 
 model_name = 'esm2_t33_650M_UR50D'
 fasta_file = pathlib.Path('./examples/human_proteome.fasta')
-output_dir = pathlib.Path('./examples/results/human_proteome_embeddings')
+output_dir = pathlib.Path('./results/human_proteome_embeddings')
 extract_embeddings(model_name, fasta_file, output_dir)
 
 def load_embeddings_from_directory(directory, layer=33):
@@ -78,7 +78,7 @@ def load_embeddings_from_directory(directory, layer=33):
     embeddings_tensor = torch.stack(embeddings_list)
     return embeddings_tensor, entry_ids_list
 
-directory = "./examples/results/human_proteome_embeddings"
+directory = "./results/human_proteome_embeddings"
 embeddings_tensor, entry_ids = load_embeddings_from_directory(directory)
 
 test_dataset = TensorDataset(embeddings_tensor)
