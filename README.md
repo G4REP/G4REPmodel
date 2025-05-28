@@ -11,6 +11,10 @@ This repository contains the source code and scripts used in the development of 
 - **Support for full human proteome analysis**
 - **Web interface available via G4REP Server**
 
+## System requirements
+The G4REP model is supported on Linux operating system with Python 3.12.2, Torch 2.2.1, scikit-learn 1.4.1.post1, NumPy 1.26.4, Pandas 2.2.1 and CUDA Toolkit 12.1.0.
+To get our complete conda environment check the `pytorch_env.yml`
+
 ## Content
 
 - `G4REPmodel.py`: the python code script that can be run to reproduce our model (preparing the data, extracting the embeddings, training and testing).
