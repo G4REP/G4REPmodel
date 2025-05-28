@@ -60,16 +60,16 @@ def extract_embeddings(model_name, fasta_file, output_dir, tokens_per_batch=4096
 
 model_name = 'esm2_t33_650M_UR50D'
 
-fasta_file = pathlib.Path('data/train.fasta')
-output_dir = pathlib.Path('results/embeddings/train_embeddings')
+fasta_file = pathlib.Path('./data/train.fasta')
+output_dir = pathlib.Path('./results/embeddings/train_embeddings')
 extract_embeddings(model_name, fasta_file, output_dir)
 
-fasta_file = pathlib.Path('data/test.fasta')
-output_dir = pathlib.Path('results/embeddings/test_embeddings')
+fasta_file = pathlib.Path('./data/test.fasta')
+output_dir = pathlib.Path('./results/embeddings/test_embeddings')
 extract_embeddings(model_name, fasta_file, output_dir)
 
-fasta_file = pathlib.Path('data/validation.fasta')
-output_dir = pathlib.Path('results/embeddings/val_embeddings')
+fasta_file = pathlib.Path('./data/validation.fasta')
+output_dir = pathlib.Path('./results/embeddings/val_embeddings')
 extract_embeddings(model_name, fasta_file, output_dir)
 
 
@@ -101,9 +101,9 @@ def load_embeddings_from_directory(directory, representation_key=33):
 
     return embeddings, labels
 
-embeddings_train, labels_train = load_embeddings_from_directory("results/embeddings/train_embeddings")
-embeddings_test, labels_test = load_embeddings_from_directory("results/embeddings/test_embeddings")
-embeddings_val, labels_val = load_embeddings_from_directory("results/embeddings/val_embeddings")
+embeddings_train, labels_train = load_embeddings_from_directory("./results/embeddings/train_embeddings")
+embeddings_test, labels_test = load_embeddings_from_directory("./results/embeddings/test_embeddings")
+embeddings_val, labels_val = load_embeddings_from_directory("./results/embeddings/val_embeddings")
 
 
 def custom_dataset(list_of_tensors, labels):
