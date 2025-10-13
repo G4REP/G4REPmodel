@@ -43,7 +43,8 @@ Run for multiple sequences from a FASTA file
 python predict.py \
   --fasta ./examples/example.fasta \
   --weights-path ./models/Model \
-  --save-embeddings-dir ./results/output_example
+  --save-embeddings-dir ./results/output_example \
+  --output-csv ./results/predictions.csv
 
 ```
 Run for a single sequence
@@ -53,7 +54,8 @@ Run for a single sequence
 python predict.py \
   --seq MKTAYIAKQRQISFVKSHFSRQDILD... \
   --id mySeq \
-  --weights-path ./models/Model
+  --weights-path ./models/Model \
+  --output-csv ./results/predictions.csv
 
 
 ```
