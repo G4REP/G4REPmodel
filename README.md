@@ -19,7 +19,7 @@ To get our complete conda environment check the `pytorch_env.yml`
 
 - `G4REPmodel.py`: Python code script that can be run to reproduce our model
   (importing the data, extracting the embeddings, training and testing).
-- `Prediction.py`: Python code script that can be run to predict new **RG4BPs**
+- `predict.py`: Python code script that can be run to predict new **RG4BPs**
   (importing the data, extracting the embeddings and testing).
 - `data`: Directory containing the training, test and validation datasets in the `.fasta` format.
 - `examples`: Directory containing the human proteome in the `.fasta` format.
@@ -36,15 +36,24 @@ pip install git+https://github.com/facebookresearch/esm.git
 
 ## Usage
 
-```python
-from Model1_ESM2_modular import main
+Run for multiple sequences from a FASTA file
 
-main(
-    model_name="esm1b_t33_650M_UR50S",
-    fasta_file="data/input.fasta",
-    output_dir="results/embeddings",
-    tokens_per_batch=4096,
-    seq_length=1022,
-    repr_layers=[33]
-)
+```python
+
+python predict.py \
+  --fasta ./examples/example.fasta \
+  --weights-path ./models/Model \
+  --save-embeddings-dir ./results/output_example
+
+```
+Run for a single sequence
+
+```python
+
+python predict.py \
+  --seq MKTAYIAKQRQISFVKSHFSRQDILD... \
+  --id mySeq \
+  --weights-path ./models/Model
+
+
 ```
