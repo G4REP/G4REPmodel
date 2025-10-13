@@ -244,23 +244,32 @@ def main():
     # 3) Predict
     preds = predict_with_lstm(embeddings, lstm_model, batch_size=args.batch_size)
 
-    # 4) Report
+    # 4) Report and optionally save to CSV
     print("\n========== Predictions ==========")
     for i, pid in enumerate(ids):
         print(f"{pid}\t{preds[i].item():.6f}")
 
+    # Save to CSV if requested
     if args.output_csv:
         import csv
         args.output_csv.parent.mkdir(parents=True, exist_ok=True)
         with args.output_csv.open("w", newline="") as f:
-            w = csv.writer(f)
-            w.writerow(["id", "prediction"])
+            writer = csv.writer(f)
+            header = ["id", "prediction"]
+            if args.seq:  # single-sequence mode
+                header.append("sequence")
+            writer.writerow(header)
+
             for i, pid in enumerate(ids):
-                w.writerow([pid, float(preds[i].item())])
-        print(f"[INFO] Wrote predictions to: {args.output_csv}")
+                row = [pid, float(preds[i].item())]
+                if args.seq:
+                    row.append(args.seq)
+                writer.writerow(row)
+
+        print(f"\n[INFO] Predictions saved to CSV: {args.output_csv.resolve()}")
+        print("[INFO] CSV columns:", ", ".join(header))
 
     print("===================================")
-
 
 if __name__ == "__main__":
     main()
