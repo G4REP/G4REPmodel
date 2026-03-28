@@ -7,7 +7,7 @@ This repository contains the source code and scripts used in the development of 
 
 If you use this model in your research, please cite:
 
-Rosignoli, S.\#, Taraglio, S.\#, Di Luzio, F., Lustrino, E., Marzella, D., Elofsson, A., Panella, M., & Paiardini, A.\*  
+Rosignoli, S.\#\*, Taraglio, S.\#, Di Luzio, F., Lustrino, E., Marzella, D., Elofsson, A., Panella, M., & Paiardini, A.\*  
 *A deep learning framework for comprehensive prediction of human RNA G-quadruplex-binding proteins.*  
 **Bioinformatics (OUP)**
 
